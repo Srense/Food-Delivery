@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipes</title>
+  <link rel="stylesheet" href="./css/recipe.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+        <div class="row d-flex container">
+          <a href="" class="logo d-flex">
+            <img src="./images/logo.png" alt="" />
+          </a>
+
+          <ul class="nav-list d-flex">
+            <a href="">Home</a>
+            <a href="">About</a>
+            <a href="">Shop</a>
+            <a href="">Food</a>
+            <a href="">Recipes</a>
+            <a href="">Contact</a>
+            <span class="close d-flex"><i class="bx bx-x"></i></span>
+          </ul>
+
+          <div class="col d-flex">
+            <form>
+              <input type="search" placeholder="Search your item" />
+              <button class="d-flex"><i class="bx bx-search"></i></button>
+            </form>
+            <div class="cart-icon d-flex">
+              <i class="bx bx-shopping-bag"></i>
+              <span>0</span>
+            </div>
+            <a class="btn signin">Sign In</a>
+          </div>
+
+          <!-- Hamburger -->
+          <div class="hamburger d-flex">
+            <i class="bx bx-menu"></i>
+          </div>
+        </div>
+      </nav>
+    <h1>Delicious Recipes</h1>
+    <p>Discover recipes for every craving!</p>
+  </header>
+  <section class="recipe-container">
+    <div class="recipe-card">
+      <img src="./images/burger.svg" alt="burger">
+      <h3>Burger</h3>
+      <p class="price">$13.00</p>
+      <button class="add-to-cart" onclick="openPopup('burger')">View Recipe</button>
+    </div>
+    <div class="recipe-card">
+      <img src="./images/biscuit.png" alt="cookies">
+      <h3>Cookies</h3>
+      <p class="price">$15.00</p>
+      <button class="add-to-cart" onclick="openPopup('cookies')">View Recipe</button>
+    </div>
+    <div class="recipe-card">
+      <img src="./images/meat-2.svg" alt="Must-Try- Dish Meat">
+      <h3>Meat-Lababdar</h3>
+      <p class="price">$12.00</p>
+      <button class="add-to-cart" onclick="openPopup('meat-lababdar')">View Recipe</button>
+    </div>
+    <div class="recipe-card">
+      <img src="./images/dish-5.png" alt="noodles">
+      <h3>Haka-Noodles</h3>
+      <p class="price">$17.00</p>
+      <button class="add-to-cart" onclick="openPopup('haka-noodles')">View Recipe</button>
+    </div>
+  </section>
+
+  <!-- Popup for Recipe -->
+  <div id="recipe-popup" class="popup">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup()">×</span>
+      <h2 id="popup-title">Recipe</h2>
+      <p id="popup-recipe"></p>
+    </div>
+  </div>
+
+  <script src="./js/recipe.js"></script>
+</body>
+</html>
